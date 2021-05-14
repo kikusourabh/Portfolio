@@ -46,19 +46,6 @@ function Resume() {
                 content={value.description}
               />
             ))}
-            {/* <h3 className="resume-title">Extracurricular Activities</h3>
-            <Resumecontent
-              title="Web Developer [Pantheon-2019 Technical Fest of BIT Mesra]"
-              content={[
-                "Worked on creating the frontend-end of the website using Bootstrap, Javascript.",
-              ]}
-            />
-            <Resumecontent
-              title="Web Developer [Bitotsav-2020 Technical Fest of BIT Mesra]"
-              content={[
-                "Operated on developing the frontend end of the website using Bootstrap, Javascript and backend APIs using Node.js",
-              ]}
-            /> */}
           </Col>
           <Col md={6} className="resume-right">
             <h3 className="resume-title">Education</h3>
