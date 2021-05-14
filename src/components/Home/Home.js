@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Profile from "../../Assets/user-profile.jpg";
-import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import data from "../../Yourdata";
@@ -28,18 +26,24 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
-                <Button
-                  size="lg"
-                  variant="outline-dark"
-                  href="https://www.upwork.com/freelancers/~01b4ca45ee1a991b88?viewMode=1"
-                >
-                  Hire me
-                </Button>
+                <div style={{ paddingTop: 50, textAlign: "left" }}>
+                  <Button
+                    size="lg"
+                    variant="outline-dark"
+                    href={data.hire_me_link}
+                  >
+                    Hire me
+                  </Button>
+                </div>
               </div>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img src={Profile} alt="home pic" className="img-fluid" />
+              <img
+                src={data.Profile_path}
+                alt="home pic"
+                className="img-fluid"
+              />
             </Col>
           </Row>
         </Container>
