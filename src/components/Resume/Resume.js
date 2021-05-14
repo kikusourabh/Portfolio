@@ -6,6 +6,8 @@ import axios from "axios";
 import pdf from "../../Assets/Soumyajit-Behera.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import data from "../../Yourdata";
+import Yourdata from "../../Yourdata";
+import ReactPlayer from "react-player";
 
 function Resume() {
   const uri = "https://porfolio-backend.vercel.app/ranks/getRanks";
@@ -44,7 +46,7 @@ function Resume() {
                 content={value.description}
               />
             ))}
-            <h3 className="resume-title">Extracurricular Activities</h3>
+            {/* <h3 className="resume-title">Extracurricular Activities</h3>
             <Resumecontent
               title="Web Developer [Pantheon-2019 Technical Fest of BIT Mesra]"
               content={[
@@ -56,39 +58,32 @@ function Resume() {
               content={[
                 "Operated on developing the frontend end of the website using Bootstrap, Javascript and backend APIs using Node.js",
               ]}
-            />
+            /> */}
           </Col>
           <Col md={6} className="resume-right">
             <h3 className="resume-title">Education</h3>
-            <Resumecontent
-              title="IMSC MATHS AND COMPUTING [BIT Mesra, Ranchi] "
-              date="2018 - Present"
-              content={[`CGPA: ${cgpa} (Till ${sem}th Sem)`]}
-            />
-            <Resumecontent
-              title="12TH BOARD [ODM Public School,Odisha]"
-              date="2015 - 2017"
-              content={["Precentage: 88%"]}
-            />
-            <Resumecontent
-              title="10TH BOARD [ST Mary's School,Odisha] "
-              date="2005 - 2015"
-              content={["Precentage: 86%"]}
-            />
+            {data.resume.Education.map((value, index) => (
+              <Resumecontent
+                isExprience={false}
+                title={value.title}
+                date={value.date}
+                content={value.content}
+              />
+            ))}
             <h3 className="resume-title">Ranks and Achivements</h3>
-            <Resumecontent
-              title=""
-              content={[
-                `Current rank in Spoj ${spojRank}`,
-                `Current rank in HackerRank  ${hackerrank}`,
-                "Top Performer in Code-Break 1.0",
-                "Participant in Hack-A-Bit 2019",
-              ]}
-            />
+            <Resumecontent title="" content={Yourdata.resume.Achivement} />
+            <br />
+            <ReactPlayer url={data.youtube_videos[3].link} controls={true} />
           </Col>
         </Row>
+
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button size="lg" variant="outline-dark" href={pdf} target="_blank">
+          <Button
+            size="lg"
+            variant="outline-dark"
+            href={Yourdata.resume.pdf_link}
+            target="_blank"
+          >
             <AiOutlineDownload />
             &nbsp;Download Resume
           </Button>

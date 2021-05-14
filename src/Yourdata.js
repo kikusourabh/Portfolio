@@ -75,6 +75,9 @@ export default {
     {
       link: "https://youtu.be/UrzOO7_7hC0",
     },
+    {
+      link: "https://www.youtube.com/watch?v=7sF1C_WczOM",
+    },
   ],
   resume: {
     Experience: [
@@ -115,5 +118,23 @@ export default {
         ],
       },
     ],
+    Education: [
+      {
+        title: "Bachelor of Computer Engineering",
+        date: "2016 - 2019",
+        content: ["Qualified with 7.46 CGPA"],
+      },
+      {
+        title: "Diploma in computer engineering",
+        date: "2013 - 2016",
+        content: ["Qualified with 9.32 CGPA"],
+      },
+    ],
+    Achivement: [
+      "Launch  of “SAGY” android APP in the Play store under the supervision of gov. Of india",
+      "Hackathon SIH18 Achieved 3rd rank",
+    ],
+    pdf_link:
+      "https://drive.google.com/file/d/1J5Gz0SDOku1SwsxZSkSPgakR0fCsbsWf/view?usp=sharing",
   },
 };
