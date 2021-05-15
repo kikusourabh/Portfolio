@@ -60,9 +60,9 @@ function Resume() {
             <h3 className="resume-title">Ranks and Achivements</h3>
             <Resumecontent title="" content={Yourdata.resume.Achivement} />
             <br />
-            <div>
+            <Row style={{ justifyContent: "center" }}>
               <ReactPlayer url={data.youtube_videos[3].link} controls={true} />
-            </div>
+            </Row>
           </Col>
         </Row>
 
