@@ -1,6 +1,6 @@
 ## orignal repo redesign from
 
-[soumyajit4419/Portfolio](https://github.com/soumyajit4419/Portfolio)\ \
+[soumyajit4419/Portfolio](https://github.com/soumyajit4419/Portfolio)\
 This project was built using these technologies.
 
 - React.js
